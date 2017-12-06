@@ -71,7 +71,9 @@
     <Content Include="main.html" />
     <Content Include="MyScripts\app.js" />
     <Content Include="MyScripts\gitHub.js" />
+    <Content Include="MyScripts\RepoController.js" />
     <Content Include="MyScripts\UserController.js" />
+    <Content Include="repo.html" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular.min.js.map" />
