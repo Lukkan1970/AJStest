@@ -1,5 +1,6 @@
-﻿<div id="userDetails">
+﻿<div>
     <h2>{{user.login}}</h2>
+    {{ error }}
     <div>location: {{user.location}}</div>
 
     Order:
@@ -27,7 +28,7 @@
         </tr>
     </tbody>
 </table>
-
+<a href="#main">Back to search</a>
 <div>
     <img ng-src="{{user.avatar_url}}" title="{{user.name}}" />
 </div>

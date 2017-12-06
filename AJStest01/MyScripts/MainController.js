@@ -1,23 +1,10 @@
 ﻿
 
+var app = angular.module('githubViewer');
 
-angular.module('githubViewer',[]).controller('MainController',
-    function ($scope, github, $interval, $log, $anchorScroll, $location) {
-
-        var onUserComplete = function (data) {
-            $scope.user = data;
-            github.getRepos($scope.user).then(onRepos, onError);
-        };
-
-        var onRepos = function (data) {
-            $scope.repos = data;
-            $location.hash("userDetails");
-            $anchorScroll();
-        };
-
-        var onError = function (reason) {
-            $scope.error = "Could not fetch the data!";
-        };
+//angular.module('githubViewer', []).controller('MainController',
+var MainController = app.controller('MainController',
+    function ($scope, $interval, $location) {
 
         var decrementCountdown = function () {
             $scope.countdown -= 1;
@@ -33,28 +20,20 @@ angular.module('githubViewer',[]).controller('MainController',
         };
 
         $scope.search = function (username) {
-            $log.info("Searshing for " + username);
-            github.getUser(username).then(onUserComplete, onError);
             if (countdownInterval) {
                 $interval.cancel(countdownInterval);
+                countdown = null;
             }
-            countdown = null;
+            $location.path("/user/" + username);
         };
 
-        
-
         $scope.username = "angular";
-        $scope.repoSortOrder = '-stargazers_count';
-        $scope.countdown = 5;
-        //var person = {
-        //    firstName: "Patrik",
-        //    lastName: "Luukkonen",
-        //    imageSrc: "/images/Patrik.jpg"
-        //};
-        $scope.message = "Github Viewer";
+        $scope.countdown = 10;
         startCountdown();
-        //$scope.person = person;
-});
+    });
+
+
+
 
 
 //(function(){

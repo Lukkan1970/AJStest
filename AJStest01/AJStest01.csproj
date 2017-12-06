@@ -68,7 +68,10 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="images\Patrik.jpg" />
+    <Content Include="main.html" />
+    <Content Include="MyScripts\app.js" />
     <Content Include="MyScripts\gitHub.js" />
+    <Content Include="MyScripts\UserController.js" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular.min.js.map" />
@@ -91,8 +94,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Home.html" />
-    <Content Include="MyScripts\MyScibbles.js" />
+    <Content Include="index.html" />
+    <Content Include="MyScripts\MainController.js" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -858,7 +861,7 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
-    <Content Include="UserDetails.html" />
+    <Content Include="user.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
